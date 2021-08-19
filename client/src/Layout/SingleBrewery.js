@@ -22,8 +22,14 @@ const SingleBrewery = (props) => {
 
       <div key={brewery.id}>
         <div>{brewery.name}</div>
-        <div>{brewery.state}</div>
-        <div>{brewery.postal_code}</div>
+        <div>
+          <label className="card-text">
+            <strong>
+              {brewery.street}, {brewery.city}, {brewery.state},{" "}
+              {brewery.postal_code}
+            </strong>
+          </label>
+        </div>
       </div>
     </div>
   );
