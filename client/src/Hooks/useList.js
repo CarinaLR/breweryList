@@ -26,6 +26,7 @@ const useList = () => {
                 brewery.brewery_type,
                 brewery.street,
                 brewery.city,
+                brewery.state,
                 brewery.postal_code,
                 brewery.website_url,
               ])

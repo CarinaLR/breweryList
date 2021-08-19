@@ -28,10 +28,18 @@ const List = () => {
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
                 <div className="card">
                   <div className="card-body">
-                    <p className="card-text">{brewery}</p>
+                    <p className="card-text">Name:{brewery[0]}</p>
+                    <br></br>
+                    <p className="card-text">Type:{brewery[1]}</p>
                   </div>
                   <label className="card-text">
-                    <strong>{brewery}</strong>
+                    <strong>
+                      {brewery[2]}, {brewery[3]}, {brewery[4]}, {brewery[5]}
+                    </strong>
+                  </label>
+                  <br></br>
+                  <label className="card-text">
+                    <strong>Website:{brewery[5]}</strong>
                   </label>
                 </div>
               </div>
