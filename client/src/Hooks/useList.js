@@ -22,6 +22,7 @@ const useList = () => {
           return [
             ...new Set(
               [...res.data].map((brewery) => [
+                brewery.id,
                 brewery.name,
                 brewery.brewery_type,
                 brewery.street,

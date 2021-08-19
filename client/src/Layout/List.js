@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Link } from "react-router-dom";
 import useList from "../Hooks/useList";
 
 const List = () => {
@@ -29,20 +30,22 @@ const List = () => {
                 <div className="card border border-info">
                   <div className="card-body">
                     <p className="card-text cardName card-title">
-                      <strong>{brewery[0]}</strong>
+                      <Link to={`/brewery/${brewery[0]}`}>
+                        <strong>{brewery[1]}</strong>
+                      </Link>
                     </p>
 
-                    <p className="card-text card-subtitle"> {brewery[1]}</p>
+                    <p className="card-text card-subtitle"> {brewery[2]}</p>
                   </div>
                   <label className="card-text">
                     <strong>
-                      {brewery[2]}, {brewery[3]}, {brewery[4]}, {brewery[5]}
+                      {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
                     </strong>
                   </label>
                   <br></br>
                   <label className="card-text">
-                    <a href={brewery[6]}>
-                      <strong>{brewery[6]}</strong>
+                    <a href={brewery[7]}>
+                      <strong>{brewery[7]}</strong>
                     </a>
                   </label>
                 </div>
