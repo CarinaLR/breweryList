@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* Classes */
+.home-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cardName {
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 187, 0);
+}
+
+.images {
+  display: flex;
+  max-width: 80%;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border-radius: 10%;
+}

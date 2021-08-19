@@ -18,10 +18,10 @@ const useList = () => {
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })
       .then((res) => {
-        setBreweries((prevBreweries) => {
+        setBreweries(() => {
           return [
             ...new Set(
-              [...prevBreweries, ...res.data].map((brewery) => [
+              [...res.data].map((brewery) => [
                 brewery.name,
                 brewery.brewery_type,
                 brewery.street,

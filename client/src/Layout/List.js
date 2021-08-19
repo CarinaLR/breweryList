@@ -22,15 +22,17 @@ const List = () => {
   return (
     <div className="container">
       <section className="text-center mb-4">
-        <div className="row wow fadeIn">
+        <div className="row">
           {newBreweries.map((brewery, index) => {
             return (
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
-                <div className="card">
+                <div className="card border border-info">
                   <div className="card-body">
-                    <p className="card-text">Name:{brewery[0]}</p>
-                    <br></br>
-                    <p className="card-text">Type:{brewery[1]}</p>
+                    <p className="card-text cardName card-title">
+                      <strong>{brewery[0]}</strong>
+                    </p>
+
+                    <p className="card-text card-subtitle"> {brewery[1]}</p>
                   </div>
                   <label className="card-text">
                     <strong>
@@ -39,7 +41,9 @@ const List = () => {
                   </label>
                   <br></br>
                   <label className="card-text">
-                    <strong>Website:{brewery[5]}</strong>
+                    <a href={brewery[6]}>
+                      <strong>{brewery[6]}</strong>
+                    </a>
                   </label>
                 </div>
               </div>

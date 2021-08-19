@@ -11,7 +11,7 @@ export class Layout extends Component {
             <code>BREWERIES</code>
           </p>
         </header>
-        <section>
+        <section className="text-center mb-4">
           <div className="home-container">
             <List />
           </div>
