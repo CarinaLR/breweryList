@@ -16,7 +16,8 @@ const SingleBrewery = (props) => {
     lat: newBrewery.latitude,
     lng: newBrewery.longitude,
   };
-  console.log(location);
+  console.log("DATA", newBrewery);
+  console.log("location", location);
   return (
     <div className="container" style={{ height: "100vh", width: "100%" }}>
       <h4>Single Brewery</h4>
@@ -33,7 +34,7 @@ const SingleBrewery = (props) => {
           </label>
         </div>
       </div>
-      <Gmap />
+      <Gmap location={location} />
     </div>
   );
 };

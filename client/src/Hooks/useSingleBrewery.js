@@ -23,7 +23,6 @@ const useSingleBrewery = (id) => {
         });
         setHasMore(res.data.length > 0);
         setLoading(false);
-        console.log(res.data);
       })
       .catch((error) => {
         if (axios.isCancel(error)) return;

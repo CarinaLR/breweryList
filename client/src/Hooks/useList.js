@@ -14,7 +14,7 @@ const useList = () => {
     let cancel;
     axios({
       method: "GET",
-      url: `https://api.openbrewerydb.org/breweries?by_city=new_york`,
+      url: `https://api.openbrewerydb.org/breweries?by_state=new_york`,
       cancelToken: new axios.CancelToken((c) => (cancel = c)),
     })
       .then((res) => {
