@@ -19,7 +19,7 @@ const SingleBrewery = (props) => {
   console.log("DATA", newBrewery);
   console.log("location", location);
   return (
-    <div className="container" style={{ height: "100vh", width: "100%" }}>
+    <div className="container">
       <h4>Single Brewery</h4>
       <div key={newBrewery.id}>
         <div>

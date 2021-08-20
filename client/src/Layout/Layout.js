@@ -8,12 +8,15 @@ export class Layout extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
+        <div className="row">
+          <header className="container">
             <p>
-              <code>BREWERIES</code>
+              <code>
+                <h1>BREWERIES</h1>
+              </code>
             </p>
           </header>
+
           <section className="text-center mb-4">
             <div className="home-container">
               <Switch>
