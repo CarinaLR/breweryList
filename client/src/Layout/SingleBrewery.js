@@ -2,7 +2,7 @@ import React from "react";
 import useSingleBrewery from "../Hooks/useSingleBrewery";
 import GoogleMapReact from "google-map-react";
 
-var googleKey = process.env.GOOGLE_MAPS_API_KEYS;
+var googleKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
 const SingleBrewery = (props) => {
   const [newBrewery, setNewBrewery] = React.useState({});
