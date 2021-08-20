@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import axios from "axios";
 
 const SingleBrewery = (props) => {
-  const [error, setError] = useState(false);
   const [brewery, setBrewery] = React.useState({});
   let cancel;
 
@@ -20,13 +18,12 @@ const SingleBrewery = (props) => {
       setBrewery(data);
     } catch (error) {
       if (axios.isCancel(error)) return;
-      setError(true);
     }
-    return () => cancel();
   };
 
   React.useEffect(() => {
     getBrewery();
+    return () => cancel();
   });
 
   return (
