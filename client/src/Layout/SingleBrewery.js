@@ -1,15 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const SingleBrewery = (props) => {
+  const [error, setError] = useState(false);
   const [brewery, setBrewery] = React.useState({});
+  let cancel;
 
   const getBrewery = async () => {
     const { id } = props.match.params;
-    const { data } = await axios.get(
-      `https://api.openbrewerydb.org/breweries/${id}`
-    );
-    setBrewery(data);
+
+    try {
+      const { data } = await axios({
+        method: "GET",
+        url: `https://api.openbrewerydb.org/breweries/${id}`,
+        cancelToken: new axios.CancelToken((c) => (cancel = c)),
+      });
+      console.log("data", data);
+      setBrewery(data);
+    } catch (error) {
+      if (axios.isCancel(error)) return;
+      setError(true);
+    }
+    return () => cancel();
   };
 
   React.useEffect(() => {
@@ -18,10 +31,11 @@ const SingleBrewery = (props) => {
 
   return (
     <div className="container">
-      <h2>Single Brewery</h2>
-
+      <h4>Single Brewery</h4>
       <div key={brewery.id}>
-        <div>{brewery.name}</div>
+        <div>
+          <h2>{brewery.name}</h2>
+        </div>
         <div>
           <label className="card-text">
             <strong>

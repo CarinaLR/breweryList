@@ -1,19 +1,12 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useList from "../Hooks/useList";
 
 const List = () => {
-  const [items, setItems] = useState(0);
-  const [reLoading, setReLoading] = useState(false);
   const [newBreweries, setNewBreweries] = useState([]);
 
   //state in our functional component, with React hooks
-  const { loading, error, breweries, hasMore } = useList();
-
-  //setting the state for the number of items
-  useEffect(() => {
-    setItems(breweries.length);
-  }, [breweries.length]);
+  const { breweries } = useList();
 
   //setting the state for the elements to show
   useEffect(() => {
