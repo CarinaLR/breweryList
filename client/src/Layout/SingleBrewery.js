@@ -1,43 +1,27 @@
 import React from "react";
-import axios from "axios";
+import useSingleBrewery from "../Hooks/useSingleBrewery";
 
 const SingleBrewery = (props) => {
-  const [brewery, setBrewery] = React.useState({});
-  let cancel;
-
-  const getBrewery = async () => {
-    const { id } = props.match.params;
-
-    try {
-      const { data } = await axios({
-        method: "GET",
-        url: `https://api.openbrewerydb.org/breweries/${id}`,
-        cancelToken: new axios.CancelToken((c) => (cancel = c)),
-      });
-      console.log("data", data);
-      setBrewery(data);
-    } catch (error) {
-      if (axios.isCancel(error)) return;
-    }
-  };
+  const [newBrewery, setNewBrewery] = React.useState({});
+  const { id } = props.match.params;
+  const { brewery } = useSingleBrewery(id);
 
   React.useEffect(() => {
-    getBrewery();
-    return () => cancel();
-  });
+    setNewBrewery(brewery);
+  }, [brewery]);
 
   return (
     <div className="container">
       <h4>Single Brewery</h4>
-      <div key={brewery.id}>
+      <div key={newBrewery.id}>
         <div>
-          <h2>{brewery.name}</h2>
+          <h2>{newBrewery.name}</h2>
         </div>
         <div>
           <label className="card-text">
             <strong>
-              {brewery.street}, {brewery.city}, {brewery.state},{" "}
-              {brewery.postal_code}
+              {newBrewery.street}, {newBrewery.city}, {newBrewery.state},{" "}
+              {newBrewery.postal_code}
             </strong>
           </label>
         </div>
