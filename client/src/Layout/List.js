@@ -20,7 +20,7 @@ const List = () => {
           {newBreweries.map((brewery, index) => {
             return (
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
-                <div className="card border border-secondary">
+                <div className="card border border-secondary text-justify text-center">
                   <h5 class="card-header card-text cardName">{brewery[1]}</h5>
                   <div className="card-body">
                     <h5 class="card-title">{brewery[2]}</h5>
@@ -31,8 +31,8 @@ const List = () => {
                     </p>
                     <p className="card-text cardName card-title">
                       <Link to={`/brewery/${brewery[0]}`}>
-                        <a href=".." class="btn btn-primary">
-                          Go somewhere
+                        <a href=".." class="btn btn-secondary">
+                          Go visit ! <il className="fas fa-beer"></il>
                         </a>
                       </Link>
                     </p>

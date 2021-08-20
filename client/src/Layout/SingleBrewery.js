@@ -20,23 +20,25 @@ const SingleBrewery = (props) => {
   console.log("location", location);
   return (
     <div className="container-fluid">
-      <h4>Single Brewery</h4>
       <div key={newBrewery.id}>
-        <div>
-          <h2>{newBrewery.name}</h2>
-        </div>
-        <div>
-          <label className="card-text">
-            <strong>
-              {newBrewery.street}, {newBrewery.city}, {newBrewery.state},{" "}
-              {newBrewery.postal_code}
-            </strong>
-          </label>
-          <div>
-            <a href={brewery.website_url}>
-              <strong>{brewery.website_url}</strong>
-            </a>
+        <div class="card text-center">
+          <div class="card-header">
+            <h4>{newBrewery.name}</h4>
           </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href={brewery.website_url}>
+                <strong>{brewery.website_url}</strong>
+              </a>
+            </h5>
+            <p class="card-text">
+              <strong>
+                {newBrewery.street}, {newBrewery.city}, {newBrewery.state},{" "}
+                {newBrewery.postal_code}
+              </strong>
+            </p>
+          </div>
+          <div class="card-footer text-muted">{newBrewery.brewery_type}</div>
         </div>
       </div>
       <Gmap location={location} />
