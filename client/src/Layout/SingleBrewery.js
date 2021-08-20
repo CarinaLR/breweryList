@@ -1,8 +1,6 @@
 import React from "react";
 import useSingleBrewery from "../Hooks/useSingleBrewery";
-import GoogleMapReact from "google-map-react";
-
-var googleKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
+import Gmap from "./Gmap";
 
 const SingleBrewery = (props) => {
   const [newBrewery, setNewBrewery] = React.useState({});
@@ -13,16 +11,14 @@ const SingleBrewery = (props) => {
     setNewBrewery(brewery);
   }, [brewery]);
 
-  const defaultProps = {
-    center: {
-      lat: brewery.latitude,
-      lng: brewery.longitude,
-    },
-    zoom: 11,
+  const location = {
+    address: `${newBrewery.street}, ${newBrewery.city}, ${newBrewery.state}`,
+    lat: newBrewery.latitude,
+    lng: newBrewery.longitude,
   };
-
+  console.log(location);
   return (
-    <div className="container">
+    <div className="container" style={{ height: "100vh", width: "100%" }}>
       <h4>Single Brewery</h4>
       <div key={newBrewery.id}>
         <div>
@@ -37,14 +33,7 @@ const SingleBrewery = (props) => {
           </label>
         </div>
       </div>
-
-      <div style={{ height: "100vh", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: googleKey }}
-          defaultCenter={defaultProps.center}
-          defaultZoom={defaultProps.zoom}
-        ></GoogleMapReact>
-      </div>
+      <Gmap />
     </div>
   );
 };
