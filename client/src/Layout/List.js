@@ -14,33 +14,35 @@ const List = () => {
   }, [breweries]);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <section className="text-center mb-4">
         <div className="row">
           {newBreweries.map((brewery, index) => {
             return (
               <div className="col-lg-3 col-md-6 mb-4" key={index}>
-                <div className="card border border-info">
+                <div className="card border border-secondary">
+                  <h5 class="card-header card-text cardName">{brewery[1]}</h5>
                   <div className="card-body">
+                    <h5 class="card-title">{brewery[2]}</h5>
+                    <p class="card-text">
+                      <strong>
+                        {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
+                      </strong>
+                    </p>
                     <p className="card-text cardName card-title">
                       <Link to={`/brewery/${brewery[0]}`}>
-                        <strong>{brewery[1]}</strong>
+                        <a href=".." class="btn btn-primary">
+                          Go somewhere
+                        </a>
                       </Link>
                     </p>
-
-                    <p className="card-text card-subtitle"> {brewery[2]}</p>
+                    <br></br>
+                    <label className="card-text">
+                      <a href={brewery[7]}>
+                        <strong>{brewery[7]}</strong>
+                      </a>
+                    </label>
                   </div>
-                  <label className="card-text">
-                    <strong>
-                      {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
-                    </strong>
-                  </label>
-                  <br></br>
-                  <label className="card-text">
-                    <a href={brewery[7]}>
-                      <strong>{brewery[7]}</strong>
-                    </a>
-                  </label>
                 </div>
               </div>
             );

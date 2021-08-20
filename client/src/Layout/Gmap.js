@@ -23,7 +23,7 @@ class Gmap extends Component {
 
   render() {
     return (
-      <div className="map" style={{ height: "40vh", width: "40%" }}>
+      <div className="row" style={{ height: "100vh", width: "100%" }}>
         <h2 className="map-h2">Come Visit Us At Our Brewery</h2>
 
         <div className="google-map">

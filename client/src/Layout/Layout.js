@@ -9,12 +9,12 @@ export class Layout extends Component {
     return (
       <Router>
         <div className="row">
-          <header className="container">
-            <p>
+          <header className="container-fluid">
+            <div className="jumbotron jumbotron-fluid jumbotron-header">
               <code>
-                <h1>BREWERIES</h1>
+                <h1>TOP NY BREWERIES</h1>
               </code>
-            </p>
+            </div>
           </header>
 
           <section className="text-center mb-4">

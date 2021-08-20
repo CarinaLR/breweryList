@@ -19,7 +19,7 @@ const SingleBrewery = (props) => {
   console.log("DATA", newBrewery);
   console.log("location", location);
   return (
-    <div className="container">
+    <div className="container-fluid">
       <h4>Single Brewery</h4>
       <div key={newBrewery.id}>
         <div>
@@ -32,6 +32,11 @@ const SingleBrewery = (props) => {
               {newBrewery.postal_code}
             </strong>
           </label>
+          <div>
+            <a href={brewery.website_url}>
+              <strong>{brewery.website_url}</strong>
+            </a>
+          </div>
         </div>
       </div>
       <Gmap location={location} />

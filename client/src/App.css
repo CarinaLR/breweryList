@@ -38,6 +38,10 @@
 }
 
 /* Classes */
+.jumbotron-header {
+  color: white;
+  background-color: #282c34;
+}
 .home-container {
   margin-top: 50px;
   text-align: center;
