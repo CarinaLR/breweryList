@@ -38,7 +38,7 @@ const List = () => {
                         </Link>
                       </p>
                       <br></br>
-                      <label className="card-text">
+                      <label className="card-text card-img-top">
                         <a href={brewery[7]}>
                           <strong>{brewery[7]}</strong>
                         </a>
