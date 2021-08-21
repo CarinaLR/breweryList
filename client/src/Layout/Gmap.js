@@ -7,13 +7,13 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 class Gmap extends Component {
   constructor(props) {
-    console.log("PROPS", props);
     super(props);
     this.state = {
       location: this.props.location,
     };
-    console.log("STATE", this.state);
+    console.log("STATE", this.state.location);
   }
+
   static defaultProps = {
     center: {
       lat: 59.95,
@@ -23,11 +23,11 @@ class Gmap extends Component {
   };
 
   render() {
-    const { location } = this.state;
+    const { location } = this.state.location;
     return (
       <div className="row" style={{ height: "100vh", width: "100%" }}>
+        <h3>{location}</h3>
         <h2 className="map-h2">Come Visit Us At Our Brewery</h2>
-
         <div className="google-map">
           <GoogleMapReact
             bootstrapURLKeys={{
@@ -36,11 +36,7 @@ class Gmap extends Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
-            <AnyReactComponent
-              lat={location.lat}
-              lng={location.lng}
-              text="HERE"
-            />
+            <AnyReactComponent lat={41.5082102} lng={-73.9809868} text="HERE" />
           </GoogleMapReact>
         </div>
       </div>
