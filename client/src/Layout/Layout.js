@@ -12,7 +12,10 @@ export class Layout extends Component {
           <header className="container-fluid">
             <div className="jumbotron jumbotron-fluid jumbotron-header text-center">
               <code>
-                <h1>TOP NY BREWERIES</h1>
+                <h1>
+                  <il className="fas fa-beer"></il>
+                  <hr></hr>TOP NY BREWERIES
+                </h1>
               </code>
             </div>
           </header>
