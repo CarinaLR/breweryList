@@ -23,10 +23,10 @@ class Gmap extends Component {
   };
 
   render() {
-    const { location } = this.state.location;
+    console.log("render", this.state.location);
+
     return (
       <div className="row" style={{ height: "100vh", width: "100%" }}>
-        <h3>{location}</h3>
         <h2 className="map-h2">Come Visit Us At Our Brewery</h2>
         <div className="google-map">
           <GoogleMapReact
@@ -36,7 +36,11 @@ class Gmap extends Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
-            <AnyReactComponent lat={41.5082102} lng={-73.9809868} text="HERE" />
+            <AnyReactComponent
+              lat={this.state.location.lat}
+              lng={this.state.location.lng}
+              text="HERE"
+            />
           </GoogleMapReact>
         </div>
       </div>
