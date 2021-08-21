@@ -23,7 +23,7 @@ class Gmap extends Component {
   };
 
   render() {
-    console.log("render", this.state.location);
+    console.log("render", this.state.location.lng);
 
     return (
       <div className="row" style={{ height: "100vh", width: "100%" }}>
