@@ -23,24 +23,24 @@ const SingleBrewery = (props) => {
       <div className="mt-5 pt-4">
         <div className="row">
           <div className="col-md-6 mb-4" key={newBrewery.id}>
-            <div class="card text-center">
-              <div class="card-header">
+            <div className="card text-center">
+              <div className="card-header">
                 <h4>{newBrewery.name}</h4>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">
+              <div className="card-body">
+                <h5 className="card-title">
                   <a href={brewery.website_url}>
                     <strong>{brewery.website_url}</strong>
                   </a>
                 </h5>
-                <p class="card-text">
+                <p className="card-text">
                   <strong>
                     {newBrewery.street}, {newBrewery.city}, {newBrewery.state},{" "}
                     {newBrewery.postal_code}
                   </strong>
                 </p>
               </div>
-              <div class="card-footer text-muted">
+              <div className="card-footer text-muted">
                 {newBrewery.brewery_type}
               </div>
             </div>
