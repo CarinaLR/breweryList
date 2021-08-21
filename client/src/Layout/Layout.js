@@ -13,7 +13,7 @@ export class Layout extends Component {
             <div className="jumbotron jumbotron-fluid jumbotron-header text-center">
               <code>
                 <h1>
-                  <il className="fas fa-beer"></il>
+                  <li className="fas fa-beer"></li>
                   <hr></hr>TOP NY BREWERIES
                 </h1>
               </code>

@@ -32,9 +32,9 @@ const List = () => {
                       </p>
                       <p className="card-text cardName card-title">
                         <Link to={`/brewery/${brewery[0]}`}>
-                          <a href=".." class="btn btn-secondary">
+                          <button href=".." class="btn btn-secondary">
                             Go visit ! <il className="fas fa-beer"></il>
-                          </a>
+                          </button>
                         </Link>
                       </p>
                       <br></br>
