@@ -10,15 +10,15 @@ export class Layout extends Component {
       <Router>
         <div className="row">
           <header className="container-fluid">
-            <div className="jumbotron jumbotron-fluid jumbotron-header">
+            <div className="jumbotron jumbotron-fluid jumbotron-header text-center">
               <code>
                 <h1>TOP NY BREWERIES</h1>
               </code>
             </div>
           </header>
 
-          <section className="text-center mb-4">
-            <div className="home-container">
+          <section className="container text-center mb-4">
+            <div>
               <Switch>
                 <Route path="/brewery/:id" component={SingleBrewery} />
                 <Route path="/breweries" component={List} />

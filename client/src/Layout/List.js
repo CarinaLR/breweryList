@@ -19,29 +19,31 @@ const List = () => {
         <div className="row">
           {newBreweries.map((brewery, index) => {
             return (
-              <div className="col-lg-3 col-md-6 mb-4" key={index}>
-                <div className="card border border-secondary text-justify text-center">
-                  <h5 class="card-header card-text cardName">{brewery[1]}</h5>
-                  <div className="card-body">
-                    <h5 class="card-title">{brewery[2]}</h5>
-                    <p class="card-text">
-                      <strong>
-                        {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
-                      </strong>
-                    </p>
-                    <p className="card-text cardName card-title">
-                      <Link to={`/brewery/${brewery[0]}`}>
-                        <a href=".." class="btn btn-secondary">
-                          Go visit ! <il className="fas fa-beer"></il>
+              <div className="col-md-6 mb-4" key={index}>
+                <div className="card-deck">
+                  <div className="card border border-secondary text-justify text-center w-200">
+                    <h5 class="card-header card-text cardName">{brewery[1]}</h5>
+                    <div className="card-body">
+                      <h5 class="card-title">{brewery[2]}</h5>
+                      <p class="card-text">
+                        <strong>
+                          {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
+                        </strong>
+                      </p>
+                      <p className="card-text cardName card-title">
+                        <Link to={`/brewery/${brewery[0]}`}>
+                          <a href=".." class="btn btn-secondary">
+                            Go visit ! <il className="fas fa-beer"></il>
+                          </a>
+                        </Link>
+                      </p>
+                      <br></br>
+                      <label className="card-text">
+                        <a href={brewery[7]}>
+                          <strong>{brewery[7]}</strong>
                         </a>
-                      </Link>
-                    </p>
-                    <br></br>
-                    <label className="card-text">
-                      <a href={brewery[7]}>
-                        <strong>{brewery[7]}</strong>
-                      </a>
-                    </label>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
