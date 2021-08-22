@@ -21,13 +21,14 @@ const List = () => {
             return (
               <div className="col-md-6 mb-4" key={index}>
                 <div className="card-deck">
-                  <div className="card border border-secondary text-justify text-center w-200">
+                  <div className="card border border-light text-justify text-center w-200 bg-transparent">
                     <h5 className="card-header card-text cardName">
                       {brewery[1]}
                     </h5>
                     <div className="card-body">
-                      <h5 className="card-title">{brewery[2]}</h5>
-                      <p className="card-text">
+                      <h5 className="card-title text-light">{brewery[2]}</h5>
+                      <hr></hr>
+                      <p className="card-text text-light">
                         <strong>
                           {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
                         </strong>

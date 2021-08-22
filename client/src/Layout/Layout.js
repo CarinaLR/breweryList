@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import List from "./List";
 import SingleBrewery from "./SingleBrewery";
 import brewery_logo from "../assets/brewery_logo.png";
+import background from "../assets/pub_1.jpg";
 import "../App.css";
 
 export class Layout extends Component {
@@ -20,7 +21,10 @@ export class Layout extends Component {
             </div>
           </header>
 
-          <section className="container text-center mb-4">
+          <section
+            className="container-fluid text-center mb-4"
+            style={{ backgroundImage: `url(${background})` }}
+          >
             <div>
               <Switch>
                 <Route path="/brewery/:id" component={SingleBrewery} />
