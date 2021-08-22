@@ -3,7 +3,12 @@ import GoogleMapReact from "google-map-react";
 
 var googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => (
+  <div>
+    {text}
+    <li className="fas fa-beer text-danger"></li>
+  </div>
+);
 
 class Gmap extends Component {
   constructor(props) {
@@ -16,8 +21,8 @@ class Gmap extends Component {
 
   static defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33,
+      lat: 40.7400479,
+      lng: -73.9893474,
     },
     zoom: 11,
   };
@@ -41,7 +46,7 @@ class Gmap extends Component {
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           >
-            <AnyReactComponent lat={59.95} lng={30.33} text="HERE" />
+            <AnyReactComponent lat={40.7400479} lng={-73.9893474} text="HERE" />
           </GoogleMapReact>
         </div>
       </div>
