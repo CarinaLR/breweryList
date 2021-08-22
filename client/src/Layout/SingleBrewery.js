@@ -33,23 +33,23 @@ const SingleBrewery = (props) => {
             key={newBrewery.id}
           >
             <div className="card text-center">
-              <div className="card-header">
+              <div className="card-header bg-secondary text-warning">
                 <h4>{newBrewery.name}</h4>
               </div>
-              <div className="card-body">
+              <div className="card-body bg-dark">
                 <h5 className="card-title">
                   <a href={brewery.website_url}>
                     <strong>{brewery.website_url}</strong>
                   </a>
                 </h5>
-                <p className="card-text">
+                <p className="card-text text-light">
                   <strong>
                     {newBrewery.street}, {newBrewery.city}, {newBrewery.state},{" "}
                     {newBrewery.postal_code}
                   </strong>
                 </p>
               </div>
-              <div className="card-footer text-muted">
+              <div className="card-footer bg-secondary text-light">
                 {newBrewery.brewery_type}
               </div>
             </div>
@@ -63,7 +63,7 @@ const SingleBrewery = (props) => {
               src={brewery_logo}
               alt="..."
               class="img-thumbnail"
-              style={{ height: "60vh", width: "100%" }}
+              style={{ width: "18em" }}
             ></img>
           </div>
         </div>
