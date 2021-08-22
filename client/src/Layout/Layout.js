@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import List from "./List";
 import SingleBrewery from "./SingleBrewery";
+import brewery_logo from "../assets/brewery_logo.png";
 import "../App.css";
 
 export class Layout extends Component {
@@ -11,12 +12,11 @@ export class Layout extends Component {
         <div className="row">
           <header className="container-fluid">
             <div className="jumbotron jumbotron-fluid jumbotron-header text-center">
-              <code>
-                <h1>
-                  <li className="fas fa-beer"></li>
-                  <hr></hr>TOP NY BREWERIES
-                </h1>
-              </code>
+              <img
+                src={brewery_logo}
+                alt="..."
+                class="img-thumbnail image-header"
+              ></img>
             </div>
           </header>
 

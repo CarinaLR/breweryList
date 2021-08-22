@@ -41,6 +41,12 @@
 .jumbotron-header {
   color: white;
   background-color: #282c34;
+  height: 30vh;
+}
+
+.image-header {
+  width: 20%;
+  height: 15vw;
 }
 .home-container {
   margin-top: 50px;
