@@ -22,18 +22,20 @@ const List = () => {
               <div className="col-md-6 mb-4" key={index}>
                 <div className="card-deck">
                   <div className="card border border-secondary text-justify text-center w-200">
-                    <h5 class="card-header card-text cardName">{brewery[1]}</h5>
+                    <h5 className="card-header card-text cardName">
+                      {brewery[1]}
+                    </h5>
                     <div className="card-body">
-                      <h5 class="card-title">{brewery[2]}</h5>
-                      <p class="card-text">
+                      <h5 className="card-title">{brewery[2]}</h5>
+                      <p className="card-text">
                         <strong>
                           {brewery[3]}, {brewery[4]}, {brewery[5]}, {brewery[6]}
                         </strong>
                       </p>
                       <p className="card-text cardName card-title">
                         <Link to={`/brewery/${brewery[0]}`}>
-                          <button href=".." class="btn btn-secondary">
-                            Go visit ! <il className="fas fa-beer"></il>
+                          <button href=".." className="btn btn-secondary">
+                            Go visit ! <li className="fas fa-beer"></li>
                           </button>
                         </Link>
                       </p>
