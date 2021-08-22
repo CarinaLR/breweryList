@@ -11,8 +11,8 @@ export class Layout extends Component {
     return (
       <Router>
         <div className="row">
-          <header className="container-fluid">
-            <div className="jumbotron jumbotron-fluid jumbotron-header text-center">
+          <header className=" container-fluid jumbotron jumbotron-fluid jumbotron-header text-center">
+            <div className="flex-align-center">
               <img
                 src={brewery_logo}
                 alt="..."

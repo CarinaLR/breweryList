@@ -2,6 +2,7 @@ import React from "react";
 import useSingleBrewery from "../Hooks/useSingleBrewery";
 import Gmap from "./Gmap";
 import bar_resto from "../assets/bar_resto.jpg";
+import brewery_logo from "../assets/brewery_logo.png";
 
 const SingleBrewery = (props) => {
   const [newBrewery, setNewBrewery] = React.useState({});
@@ -27,7 +28,10 @@ const SingleBrewery = (props) => {
     <div className="container-fluid">
       <div className="mt-5 pt-4">
         <div className="row">
-          <div className="col-md-6 mb-4" key={newBrewery.id}>
+          <div
+            className="col-md-6 mb-4 flex-align-center flex-column"
+            key={newBrewery.id}
+          >
             <div className="card text-center">
               <div className="card-header">
                 <h4>{newBrewery.name}</h4>
@@ -52,8 +56,15 @@ const SingleBrewery = (props) => {
             <hr></hr>
             <img src={bar_resto} alt="..." class="img-thumbnail"></img>
           </div>
-          <div className="col-md-6 mb-4">
+          <div className="col-md-6 mb-4 flex-align-center flex-column">
             <Gmap location={location} />
+            <hr></hr>
+            <img
+              src={brewery_logo}
+              alt="..."
+              class="img-thumbnail"
+              style={{ height: "60vh", width: "100%" }}
+            ></img>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ const List = () => {
                 <div className="card-deck">
                   <div className="card border border-light text-justify text-center w-200 bg-transparent">
                     <h5 className="card-header card-text cardName">
-                      {brewery[1]}
+                      <strong>{brewery[1]}</strong>
                     </h5>
                     <div className="card-body">
                       <h5 className="card-title text-light">{brewery[2]}</h5>

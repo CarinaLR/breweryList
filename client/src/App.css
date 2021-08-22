@@ -3,7 +3,11 @@
 hr {
   background-color: white;
 }
+header {
+  margin-bottom: 0px;
+}
 
+/* Classes from create react app */
 .App {
   text-align: center;
 }
@@ -48,6 +52,7 @@ hr {
   color: white;
   background-color: #282c34;
   height: 30vh;
+  margin-bottom: 0px;
 }
 
 .image-header {
