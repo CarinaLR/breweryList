@@ -34,7 +34,9 @@ const SingleBrewery = (props) => {
           >
             <div className="card text-center">
               <div className="card-header bg-secondary text-warning">
-                <h4>{newBrewery.name}</h4>
+                <h4>
+                  <strong>{newBrewery.name}</strong>
+                </h4>
               </div>
               <div className="card-body bg-dark">
                 <h5 className="card-title">
