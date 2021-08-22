@@ -23,11 +23,14 @@ class Gmap extends Component {
   };
 
   render() {
-    console.log("render", this.state.location.lng);
+    console.log("render", this.state.location.lat);
+
+    const handleApiLoaded = (map, maps) => {
+      // use map and maps objects
+    };
 
     return (
-      <div className="row" style={{ height: "100vh", width: "100%" }}>
-        <h2 className="map-h2">Come Visit Us At Our Brewery</h2>
+      <div className="row" style={{ height: "80vh", width: "100%" }}>
         <div className="google-map">
           <GoogleMapReact
             bootstrapURLKeys={{
@@ -35,12 +38,10 @@ class Gmap extends Component {
             }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
+            yesIWantToUseGoogleMapApiInternals
+            onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           >
-            <AnyReactComponent
-              lat={this.state.location.lat}
-              lng={this.state.location.lng}
-              text="HERE"
-            />
+            <AnyReactComponent lat={59.95} lng={30.33} text="HERE" />
           </GoogleMapReact>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import useSingleBrewery from "../Hooks/useSingleBrewery";
 import Gmap from "./Gmap";
+import bar_resto from "../assets/bar_resto.jpg";
 
 const SingleBrewery = (props) => {
   const [newBrewery, setNewBrewery] = React.useState({});
@@ -48,6 +49,8 @@ const SingleBrewery = (props) => {
                 {newBrewery.brewery_type}
               </div>
             </div>
+            <hr></hr>
+            <img src={bar_resto} alt="..." class="img-thumbnail"></img>
           </div>
           <div className="col-md-6 mb-4">
             <Gmap location={location} />
