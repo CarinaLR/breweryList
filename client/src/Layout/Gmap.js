@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 
 var googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
-//render on the map text and an icon to specify the brewery's location.
+//render on the map, the text and an icon to specify the brewery's location.
 const LocationCenter = ({ text }) => (
   <div>
     <h5>
@@ -13,7 +13,7 @@ const LocationCenter = ({ text }) => (
   </div>
 );
 
-//component takes the data passing from parent SingleBrewery functional component, and render the position of the brewery on map. Connect's location with google maps api's.
+//component takes the data passing from the parent SingleBrewery functional component and renders the brewery's position on the map. Connect's a location with google maps API.
 class Gmap extends Component {
   constructor(props) {
     super(props);
