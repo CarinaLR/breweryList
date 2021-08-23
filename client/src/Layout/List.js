@@ -14,7 +14,7 @@ const List = () => {
   }, [breweries]);
 
   return (
-    <div className="container-fluid">
+    <div className="container">
       <section className="text-center mb-4">
         <div className="row">
           {newBreweries.map((brewery, index) => {
