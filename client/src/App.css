@@ -133,3 +133,20 @@ header {
     font-size: 10vw;
   }
 }
+
+/*
+  static defaultProps = {
+    center: {
+      lat: 40.7400479,
+      lng: -73.9893474,
+    },
+    zoom: 11,
+  };
+
+    const location = {
+    address: `${newBrewery.street}, ${newBrewery.city}, ${newBrewery.state}`,
+    lat: latt,
+    lng: lngg,
+  };
+
+*/

@@ -17,7 +17,6 @@ const SingleBrewery = (props) => {
   const lngg = parseInt(newBrewery.longitude, 10);
 
   const location = {
-    address: `${newBrewery.street}, ${newBrewery.city}, ${newBrewery.state}`,
     lat: latt,
     lng: lngg,
   };
@@ -57,7 +56,7 @@ const SingleBrewery = (props) => {
             <img src={bar_resto} alt="..." className="img-thumbnail"></img>
           </div>
           <div className="col-md-6 mb-4 flex-align-center flex-column">
-            <Gmap location={location} />
+            <Gmap location={location} zoomLevel={11} />
             <hr></hr>
             <img
               src={brewery_logo}
