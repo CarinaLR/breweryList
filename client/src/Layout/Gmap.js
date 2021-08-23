@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 
 var googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
-const AnyReactComponent = ({ text }) => (
+const LocationCenter = ({ text }) => (
   <div>
     <h5>
       {text}
@@ -41,7 +41,7 @@ class Gmap extends Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
           >
-            <AnyReactComponent lat={40.7400479} lng={-73.9893474} text="HERE" />
+            <LocationCenter lat={40.7400479} lng={-73.9893474} text="HERE" />
           </GoogleMapReact>
         </div>
       </div>
