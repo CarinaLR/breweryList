@@ -6,6 +6,7 @@ import brewery_logo from "../assets/brewery_logo.png";
 import background from "../assets/pub_1.jpg";
 import "../App.css";
 
+//Specify the routes for our components, here we set each component to a specific path and a specific component, this allows us to switch components accordingly.
 export class Layout extends Component {
   render() {
     return (
