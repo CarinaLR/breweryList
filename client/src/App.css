@@ -62,6 +62,7 @@ header {
 .mgn-btt {
   margin-bottom: 50px;
 }
+
 .home-container {
   margin-top: 50px;
   text-align: center;
@@ -91,12 +92,20 @@ header {
   .image-header {
     width: 8em;
   }
+
+  .mgn-btt {
+    margin-bottom: 20px;
+  }
 }
 
 /* Sass mixins medium devices*/
 @media screen and (min-width: 768px) {
   .image-header {
     width: 10em;
+  }
+
+  .mgn-btt {
+    margin-bottom: 20px;
   }
 }
 
@@ -105,12 +114,20 @@ header {
   .image-header {
     width: 12em;
   }
+
+  .mgn-btt {
+    margin-bottom: 50px;
+  }
 }
 
 /* Sass mixins extra large devices*/
 @media screen and (min-width: 1200px) {
   .image-header {
     width: 12em;
+  }
+
+  .mgn-btt {
+    margin-bottom: 50px;
   }
 }
 

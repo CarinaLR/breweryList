@@ -23,7 +23,7 @@ export class Layout extends Component {
           </header>
 
           <section
-            className="container-fluid text-center mb-4"
+            className="container-fluid text-center"
             style={{ backgroundImage: `url(${background})` }}
           >
             <div>
