@@ -58,6 +58,10 @@ header {
 .image-header {
   width: 12em;
 }
+
+.mgn-btt {
+  margin-bottom: 50px;
+}
 .home-container {
   margin-top: 50px;
   text-align: center;

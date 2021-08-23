@@ -12,7 +12,7 @@ export class Layout extends Component {
       <Router>
         <div className="row">
           <header className=" container-fluid jumbotron jumbotron-fluid jumbotron-header text-center">
-            <div className="flex-align-center">
+            <div className="flex-align-center mgn-btt">
               <img
                 src={brewery_logo}
                 alt="..."
