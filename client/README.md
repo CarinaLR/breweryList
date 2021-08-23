@@ -1,6 +1,44 @@
+# Breweries List Implementation
+
+Challenge - andculture.
+
+Build a single page application using `React` to display a list of breweries with the ability to click on an item from the list to view more details on that brewery.
+
+Features:
+`List of breweries`, build a component that displays a list of breweries in a US city.
+`Single brewery`, build a component that displays the details of a brewery.
+
+This project is base on OpenBreweryDB API. (https://www.openbrewerydb.org/)
+
+Built with `JavaScript`/ `ReactJS` / `React-Hooks`/ `Axios`/ `OpenBreweryDB API`/ `Google Maps`/`Bootstrap4` / `Sass`.
+
+# Google Maps integration
+
+`Google maps` map indicating the brewery’slocation using latitude and longitude.
+Requirements: `Google Maps API key` and `google-map-react` package.
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- `npx create-react-app my app` no need to install or configure webpack or Babel, npx is pre-bundled with npm.
+- `git init` initalize an empty repository.
+- `npm install axios` promise-based HTTP client for the browser and node.js, request data from URL provided.
+- `npm install dotenv` to protect all sensitive keys and load variables from the .env file with process.env.
+- `npm install --save google-map-react`it allows you to render Google Map with latitude and longitude.
+- `npm install bootstrap@4` framework for building responsive, mobile-first sites
+- `npm install -g sass` alternative `npm install node-sass` preprocessor that help you write robust, maintainable CSS.
+- `localhost 3000` port that supports our frontend.
+
+```
+# client -contains all the frontend modules, here we store all client-side modules, needed to connect to fetch our data from the api and display it to the DOM.
+# src folder -the core of the frontend structure connects and renders our components and hooks.
+# Hooks folder -contains useList and useSingleBrewery custom hooks, need it to set state using in our components, in a modular reusing way.
+# Layout folder -contains Layout.js, List.js, SingleBrewery.js, and Gmap.js which are our components used to fetch the data required render all the information and google maps on our client-side. Implementing functional components and utilizing react hooks.
+# App.js -Wraps the Layout component, which at the same time wraps the List and SingleBrewery components allowing them to render in the application.
+# src folder -contains ` assets` folder which contains all images using in the application, and readme file.
+
+React Hooks allows to break down the logic. Allows to reuse the component, and bringing in that logic to other components, providing stateless components which means, having a functional component.
+
+```
 
 ## Available Scripts
 
@@ -8,16 +46,11 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
@@ -29,42 +62,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Breweries List Page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](/client/src/assets/home_page_top&scroll.png)
+
+## Single Brewery, integrating Google Maps.
+
+![](/client/src/assets/single_brewery_top&scroll.png)
+
+## Responsive design.
+
+![](/client/src/assets/responsive_design_allPages.png)
