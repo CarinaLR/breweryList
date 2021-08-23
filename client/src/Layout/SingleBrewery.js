@@ -13,16 +13,15 @@ const SingleBrewery = (props) => {
     setNewBrewery(brewery);
   }, [brewery]);
 
-  const latt = parseInt(newBrewery.latitude);
-  const lngg = parseInt(newBrewery.longitude);
+  const latt = parseInt(newBrewery.latitude, 10);
+  const lngg = parseInt(newBrewery.longitude, 10);
 
   const location = {
     address: `${newBrewery.street}, ${newBrewery.city}, ${newBrewery.state}`,
     lat: latt,
     lng: lngg,
   };
-  console.log("DATA", newBrewery);
-  console.log("location", location);
+
   return (
     <div className="container-fluid">
       <div className="mt-5 pt-4">
@@ -55,7 +54,7 @@ const SingleBrewery = (props) => {
               </div>
             </div>
             <hr></hr>
-            <img src={bar_resto} alt="..." class="img-thumbnail"></img>
+            <img src={bar_resto} alt="..." className="img-thumbnail"></img>
           </div>
           <div className="col-md-6 mb-4 flex-align-center flex-column">
             <Gmap location={location} />
@@ -63,7 +62,7 @@ const SingleBrewery = (props) => {
             <img
               src={brewery_logo}
               alt="..."
-              class="img-thumbnail"
+              className="img-thumbnail"
               style={{ width: "18em" }}
             ></img>
           </div>

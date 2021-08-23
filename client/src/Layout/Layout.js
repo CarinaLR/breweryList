@@ -16,7 +16,7 @@ export class Layout extends Component {
               <img
                 src={brewery_logo}
                 alt="..."
-                class="img-thumbnail image-header"
+                className="img-thumbnail image-header"
               ></img>
             </div>
           </header>

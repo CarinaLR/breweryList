@@ -18,7 +18,6 @@ class Gmap extends Component {
     this.state = {
       location: this.props.location,
     };
-    console.log("STATE", this.state.location);
   }
 
   static defaultProps = {
@@ -30,11 +29,7 @@ class Gmap extends Component {
   };
 
   render() {
-    console.log("render", this.state.location.lat);
-
-    const handleApiLoaded = (map, maps) => {
-      // use map and maps objects
-    };
+    console.log("render", this.props.location);
 
     return (
       <div className="row" style={{ height: "80vh", width: "100%" }}>
@@ -45,8 +40,6 @@ class Gmap extends Component {
             }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
           >
             <AnyReactComponent lat={40.7400479} lng={-73.9893474} text="HERE" />
           </GoogleMapReact>
