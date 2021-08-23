@@ -5,8 +5,10 @@ var googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
 const AnyReactComponent = ({ text }) => (
   <div>
-    {text}
-    <li className="fas fa-beer text-danger"></li>
+    <h5>
+      {text}
+      <li className="fas fa-beer text-danger"></li>
+    </h5>
   </div>
 );
 
