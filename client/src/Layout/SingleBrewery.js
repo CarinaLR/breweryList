@@ -4,6 +4,7 @@ import Gmap from "./Gmap";
 import bar_resto from "../assets/bar_resto.jpg";
 import brewery_logo from "../assets/brewery_logo.png";
 
+//render a piece of detailed information from a specific brewery. Calls our useSingleBrewery custom hook, passing an id as parameter to fetch data and set it as our state in the functional component to be used.
 const SingleBrewery = (props) => {
   const [newBrewery, setNewBrewery] = React.useState({});
   const { id } = props.match.params;
@@ -13,6 +14,7 @@ const SingleBrewery = (props) => {
     setNewBrewery(brewery);
   }, [brewery]);
 
+  //gets data from the state as a string and convert it in number, passing a radix (10) to specify decimal; information to be used in google map.
   const latt = parseInt(newBrewery.latitude, 10);
   const lngg = parseInt(newBrewery.longitude, 10);
 
