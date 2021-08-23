@@ -22,6 +22,7 @@ class Gmap extends Component {
     };
   }
 
+  //static variable is used to satisfy a default render in case data is not available. It centers the map when it first loads.
   static defaultProps = {
     center: {
       lat: 40.7400479,
