@@ -16,7 +16,6 @@ const SingleBrewery = (props) => {
   const latt = parseInt(newBrewery.latitude);
   const lngg = parseInt(newBrewery.longitude);
 
-  console.log("latt", typeof latt, latt);
   const location = {
     address: `${newBrewery.street}, ${newBrewery.city}, ${newBrewery.state}`,
     lat: latt,
