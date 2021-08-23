@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useList from "../Hooks/useList";
 
+//renders all the breweries list. Calls our useList custom hook, fetch data, and set it as our state in the functional component to be used. Our state initializes with an array, to render the information we will need to map through the array. The link component will direct the path to the specific component.
 const List = () => {
   const [newBreweries, setNewBreweries] = useState([]);
 
-  //state in our functional component, with React hooks
+  //state in our functional component, with React hooks.
   const { breweries } = useList();
 
-  //setting the state for the elements to show
+  //setting the state for the elements to show.
   useEffect(() => {
     setNewBreweries([...breweries]);
   }, [breweries]);
