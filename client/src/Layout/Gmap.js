@@ -4,7 +4,7 @@ import GoogleMapReact from "google-map-react";
 var googleApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEYS;
 
 //render on the map, the text and an icon to specify the brewery's location.
-const LocationCenter = ({ lat, lng, text }) => {
+const LocationCenter = ({ text }) => {
   return (
     <div>
       <h5>
@@ -17,24 +17,6 @@ const LocationCenter = ({ lat, lng, text }) => {
 
 //component takes the data passing from the parent SingleBrewery functional component and renders the brewery's position on the map. Connect's a location with google maps API.
 const Gmap = ({ location, zoomLevel }) => {
-  let googleMapRef;
-  let googleRef;
-  let positions;
-  let markers;
-
-  const handleApiLoaded = (map, maps) => {
-    // use map and maps objects
-    positions = location;
-    googleMapRef = map;
-    googleRef = maps;
-
-    markers = (positions) => {
-      return new googleRef.Marker({ position: positions });
-    };
-
-    let markerCluster = new LocationCenter(markers);
-  };
-
   /*typecheck error when parsing lat and lng in LocationPin. Returning (NaN,NaN)*/
 
   //static variable is used to satisfy a default render in case data is not available. It centers the map when it first loads.
@@ -52,8 +34,6 @@ const Gmap = ({ location, zoomLevel }) => {
           bootstrapURLKeys={{ key: googleApiKey }}
           defaultCenter={defaultProps.center}
           defaultZoom={zoomLevel}
-          yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
         >
           <LocationCenter
             lat={defaultProps.center.lat}
