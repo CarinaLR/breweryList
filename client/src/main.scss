@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans&display=swap");
+
+@import "scss/abstracts/vars";
+@import "scss/components/List";
+
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}

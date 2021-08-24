@@ -1,0 +1,10 @@
+.cardName {
+  font-size: calc(10px + 2vmin);
+  color: $cardNameColor;
+  transition: all 0.4s ease 0s;
+
+  &:hover {
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+  }
+}
