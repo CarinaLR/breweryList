@@ -8,9 +8,3 @@
   display: flex;
   justify-content: space-between;
 }
-
-@include media-breakpoint-up(sm) {
-  .jumbotron-header {
-    display: block;
-  }
-}
