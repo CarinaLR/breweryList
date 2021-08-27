@@ -17,6 +17,18 @@ Built with `JavaScript`/ `ReactJS` / `React-Hooks`/ `Axios`/ `OpenBreweryDB API`
 `Google maps` map indicating the brewery’s location using latitude and longitude.
 Requirements: `Google Maps API key` and `google-map-react` package.
 
+## Enviroment
+
+- `git clone` with this repo url to get the code in local machine
+- `npm install` activates the environment and install all dependencies used
+- `cd client` to switch to the correct module and start using the app
+
+## Available Scripts
+
+### `npm start`
+
+to view it in the browser.
+
 # Getting Started with Create React App
 
 - `npx create-react-app my app` no need to install or configure webpack or Babel, npx is pre-bundled with npm.
@@ -39,12 +51,6 @@ Requirements: `Google Maps API key` and `google-map-react` package.
 React Hooks allows to break down the logic. Allows to reuse the component, and bringing in that logic to other components, providing stateless components which means, having a functional component.
 
 ```
-
-## Available Scripts
-
-### `npm start`
-
-to view it in the browser.
 
 ## Breweries List Page.
 
