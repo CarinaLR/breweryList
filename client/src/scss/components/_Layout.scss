@@ -1,0 +1,47 @@
+.jumbotron-header {
+  color: white;
+  background-color: $jumbotronHeaderColor;
+  height: 30vh;
+  margin-bottom: 0px;
+}
+
+.image-header {
+  width: 12em;
+}
+
+.mgn-btt {
+  margin-bottom: 50px;
+}
+
+/* Sass mixins small devices */
+@media screen and (min-width: 576px) {
+  .image-header {
+    width: 8em;
+  }
+
+  .mgn-btt {
+    margin-bottom: 20px;
+  }
+}
+
+/* Sass mixins medium devices*/
+@media screen and (min-width: 768px) {
+  .image-header {
+    width: 10em;
+  }
+
+  .mgn-btt {
+    margin-bottom: 20px;
+  }
+}
+
+/* Sass mixins large devices*/
+@media screen and (min-width: 992px) {
+  .image-header {
+    width: 12em;
+  }
+
+  .mgn-btt {
+    margin-bottom: 50px;
+  }
+}

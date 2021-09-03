@@ -3,8 +3,15 @@
 @import "scss/abstracts/vars";
 @import "scss/abstracts/mixins";
 @import "scss/components/List";
+@import "scss/components/Layout";
+@import "scss/components/Gmap";
 
 body {
   font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.cardName {
+  font-size: calc(10px + 2vmin);
+  color: $cardNameColor;
 }
