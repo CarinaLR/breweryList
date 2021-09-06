@@ -3,6 +3,7 @@
   background-color: $jumbotronHeaderColor;
   height: 30vh;
   margin-bottom: 0px;
+  @include flex-center-hor-col;
 }
 
 .image-header {
